@@ -1,0 +1,23 @@
+li, .players{
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	list-style: none;
+	width: 30%;
+    animation: fade 0.5s linear;
+}
+
+
+@keyframes fade {
+  0%,100% { opacity: 0  }
+  100% { opacity: 1 }
+}
+
+
+
+.teams {
+	margin-top: 5px;
+	background-color: #496892;
+	color: #f2f2f2;
+}
