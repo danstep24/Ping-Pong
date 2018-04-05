@@ -1,23 +1,44 @@
-li, .players{
-	padding: 5px;
-	margin-left: auto;
-	margin-right: auto;
+ul{
+	margin-top: 30px;
+	width: 80%
+
 	
-	list-style: none;
-	width: 30%;
-    animation: fade 0.5s linear;
 }
 
+li, .players{
+	list-style: none;
+	animation: fade 0.5s linear;
+	padding: 3px;
+	margin-right: auto;
+	border-radius: 6px;
+	margin-bottom: 0px; 
+	margin-top: 0px; 
+}
+
+.teams {
+	margin-top: 5px;
+	background-color: #496892;
+	color: #f2f2f2;
+}
+
+.vs {
+	padding: 0px;
+	
+}
 
 @keyframes fade {
   0%,100% { opacity: 0  }
   100% { opacity: 1 }
 }
 
+@media only screen and (max-width: 600px) {
+	ul {
+		width: 90%;
+	}
 
+	li, .players{
+		margin-left: auto;
 
-.teams {
-	margin-top: 5px;
-	background-color: #496892;
-	color: #f2f2f2;
+	}
+
 }

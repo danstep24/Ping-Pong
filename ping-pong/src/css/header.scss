@@ -1,31 +1,51 @@
 //used to set the header styling
 
 .branding {
+	/* Display */
 	background-color: #425d7c;
+	color: #f2f2f2;
+
+	/* Positioning */
 	padding: 3px;
 	padding-top: 11px;
-	color: #f2f2f2
 }
 .page-header {
+	/* Display */
 	background-color: #549f91;
+	box-shadow: 0px 5px #888888;
+	
+	/* Positioning */
 	vertical-align: middle;	
 	padding: 20px;
 	margin: 0px;
-	box-shadow: 0px 5px #888888;
+	
 
-
-
-	h1{
-		padding-top: 10px;
+	/* Text */
+	h1, h5 {
 		color: #f2f2f2;
+	}
+
+	h1 {
 		text-shadow: 2px 3px #888888;
 		font-size: 3.5em;
+	}
 
+	h5 {
+		text-shadow: 1px 1px #888888;
+		font-size: 1.1em;
 
 	}
 
+	/* Img Display */
 	img {
-		
-	width: 100px;
+		padding-top: 10px;
+		width: 100px;
 	}
+}
+
+@media only screen and (max-width: 1013px) {
+	.racket {
+		display: none;
+	}
+
 }

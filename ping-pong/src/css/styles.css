@@ -1,60 +1,111 @@
+ul {
+  margin-top: 30px;
+  width: 80%; }
+
 li, .players {
-  padding: 5px;
-  margin-left: auto;
-  margin-right: auto;
   list-style: none;
-  width: 30%;
-  animation: fade 0.5s linear; }
+  animation: fade 0.5s linear;
+  padding: 3px;
+  margin-right: auto;
+  border-radius: 6px;
+  margin-bottom: 0px;
+  margin-top: 0px; }
+
+.teams {
+  margin-top: 5px;
+  background-color: #496892;
+  color: #f2f2f2; }
+
+.vs {
+  padding: 0px; }
 
 @keyframes fade {
   0%,100% {
     opacity: 0; }
   100% {
     opacity: 1; } }
-.teams {
-  margin-top: 5px;
-  background-color: #496892;
-  color: #f2f2f2; }
+@media only screen and (max-width: 600px) {
+  ul {
+    width: 90%; }
 
+  li, .players {
+    margin-left: auto; } }
 .branding {
+  /* Display */
   background-color: #425d7c;
+  color: #f2f2f2;
+  /* Positioning */
   padding: 3px;
-  padding-top: 11px;
-  color: #f2f2f2; }
+  padding-top: 11px; }
 
 .page-header {
+  /* Display */
   background-color: #549f91;
+  box-shadow: 0px 5px #888888;
+  /* Positioning */
   vertical-align: middle;
   padding: 20px;
   margin: 0px;
-  box-shadow: 0px 5px #888888; }
+  /* Text */
+  /* Img Display */ }
+  .page-header h1, .page-header h5 {
+    color: #f2f2f2; }
   .page-header h1 {
-    padding-top: 10px;
-    color: #f2f2f2;
     text-shadow: 2px 3px #888888;
     font-size: 3.5em; }
+  .page-header h5 {
+    text-shadow: 1px 1px #888888;
+    font-size: 1.1em; }
   .page-header img {
+    padding-top: 10px;
     width: 100px; }
 
+@media only screen and (max-width: 1013px) {
+  .racket {
+    display: none; } }
 html body {
   height: 100vh;
   min-height: 100%;
   background: linear-gradient(rgba(50, 50, 50, 0.61), rgba(50, 50, 50, 0.61)), url("../images/tennis.jpg");
   text-align: right;
-  background-repeat: no-repeat;
   background-size: cover; }
 
 .controls {
   border: 1px solid #afafaf;
   padding: 20px;
-  border-radius: 3px;
-  box-shadow: 1px 1px #afafaf;
+  border-radius: 4px;
   border: none;
-  width: 50%;
-  margin: auto;
-  margin-top: 20px;
-  background-color: #498c92; }
-  .controls button {
+  width: 70%;
+  margin-left: auto;
+  margin-top: 30px;
+  background-color: #498c92;
+  color: #f2f2f2;
+  text-align: left;
+  animation: fade 1s linear; }
+  .controls button, .controls input {
     margin: 5px; }
+@keyframes fade {
+  0%,100% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@media only screen and (max-width: 600px) {
+  .controls {
+    width: 90%;
+    margin-right: auto; } }
+.footer {
+  background-color: #425d7c;
+  color: #f2f2f2;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  /* Display */
+  background-color: #425d7c;
+  color: #f2f2f2;
+  /* Positioning */
+  padding: 3px;
+  padding-top: 11px; }
 
 /*# sourceMappingURL=styles.css.map */
