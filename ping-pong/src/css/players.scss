@@ -1,44 +1,54 @@
+/* List of players*/
 ul{
 	margin-top: 30px;
-	width: 80%
-
-	
+	margin-bottom: 50px;
+	width: 80%;	
 }
 
+/* Player */
 li, .players{
-	list-style: none;
-	animation: fade 0.5s linear;
+	
+	/* Positioning / Size */
 	padding: 3px;
 	margin-right: auto;
-	border-radius: 6px;
-	margin-bottom: 0px; 
 	margin-top: 0px; 
+	border-radius: 0px;
+	
+	/* Display */
+	list-style: none;
+	
+	/* Animation */
+	animation: fade 0.5s linear;
 }
 
+/* Player */
 .teams {
+	/* Positioning / Size */
 	margin-top: 5px;
+
+	/* Display */
+	border-radius: 6px 6px 0px 0px;
 	background-color: #496892;
 	color: #f2f2f2;
 }
 
 .vs {
 	padding: 0px;
-	
 }
 
+/* Fade ins for li */
 @keyframes fade {
-  0%,100% { opacity: 0  }
-  100% { opacity: 1 }
+	0%,100% { opacity: 0  }
+	100% { opacity: 1 }
 }
 
-@media only screen and (max-width: 600px) {
+/* Increases width and centers when screen size is less than 700 */
+@media only screen and (max-width: 700px) {
 	ul {
 		width: 90%;
 	}
 
 	li, .players{
 		margin-left: auto;
-
 	}
-
 }

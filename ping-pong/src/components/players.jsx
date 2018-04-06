@@ -1,24 +1,35 @@
-import React, { Component }  from "react";
+import React, { Component, Fragment }  from "react";
 
 // we use className to add classes for Bootstrap styling
 class Players extends Component {
     constructor(props) {
 	    super(props);
-	    //set using state to keep track of the players added. 
 	    this.state = {
+	      // The players that have been added
 	      players: [],
+	      // The player being entered in the input field.
 	      player: "",
+	      // How many players the user has added
 	      counter: 0,
+	      // If the the user has run the "suffles fuction"
 	      shuffled: false,
+	      // message to be displayed to the user
 	      message: "",
-    }
+    	}
 
     this.players = this.players.bind (this);
     this.update = this.update.bind(this);
-    this.shuffles = this.shuffles.bind(this);
-
+    this.shuffle = this.shuffle.bind(this);
 	}
   
+  	// updates the player state as the user types. 
+  	update(e) {
+	    this.setState({
+	      player: e.target.value,
+	      
+	    });
+	}
+
   	players() {
 	    // If the text field is empty, the player will not be added.
 	    if (this.state.player !== "") {
@@ -26,20 +37,20 @@ class Players extends Component {
 	    // Pushes the player into the players array
 	      this.state.players.push(this.state.player);
 	      
-	      // After add player button is clicked: Sets text input blank, counter + 1 and undo the shuffles function.
+	      // After add player button is clicked: Sets text input blank, counter + 1 and undo the shuffle function.
 	      this.setState({
 	        player: "",
 	        counter: this.state.counter + 1,
 	        shuffled: false,
 	        message: "",
-	      })
+	      });
 	    }
   	}
 
-  // Fisher–Yates shuffle algorithm for shuffling the array
-	shuffles() {
-	    
+  // Fisher–Yates shuffle algorithm for shuffling the players array
+	shuffle() {
 		const counter = this.state.counter;
+	    // Checks if the number of players is divisible by 2 & is more than 0 
 	    if(counter % 2 === 0 && counter > 0) {
 		    const arr = this.state.players;
 		    var i,
@@ -51,7 +62,7 @@ class Players extends Component {
 		        arr[i] = arr[j];
 		        arr[j] = temp;
 		    } 
-		    // Sets the sate of the array with shuffling.
+		    // Sets the sate of the array after shuffling.
 		    this.setState({
 		      players: arr,
 		      shuffled: true,
@@ -60,51 +71,51 @@ class Players extends Component {
 		
 		}
 		else {
-			// error message if the counter isnt divisible by 2
+			// error message if the counter isnt divisible by 2 
 			this.setState({
 		      message: "Error: You need to enter teams in multiples of two",
 		    });
 		}
 	}
-	// updates the player state as the user types. 
-  	update(e) {
-	    this.setState({
-	      player: e.target.value,
-	      
-	    })
-	}
+	
 
 	render() {
+ 		
  	return (
     	<div className="row">
-			
-			{/* Col for the controls  */}
+			{/* -------------------- Column for the controls ------------------------------  */}
 			<div className="col-sm-6">
 			    <div className="controls form-group"> 
-			        <input id="myInput "type="text" placeholder="Enter a player name" className="form-control" value={ this.state.player } onChange={ this.update }/>
+			        {/* Input for the player name  */}
+			        <input type="text" placeholder="Enter a player name" className="form-control" value={ this.state.player } onChange={ this.update }/>
+			        {/* Add player button and number of players counter  */}
 			        <p>
-			        	<button id="submit" type="submit" className="btn btn-success" onClick={this.players}> Add Player </button>
+			        	<button className="btn btn-success" onClick={ this.players }> Add Player </button>
 			         	Players: { this.state.counter } 
 			        </p>
-			        <button type="button" className="btn btn-primary" onClick={ this.shuffles } > Create Tournament </button>
-			        <p> {this.state.message} </p>
+			        {/* Create Tournament button*/}
+			        <button type="button" className="btn btn-primary" onClick={ this.shuffle } > Create Tournament </button>
+			       	{/* Message displayed to users (success/failure)*/}
+			        <p className="message"> { this.state.message } </p>
 				</div>
 			</div>
     
-    		{/* Col for the players names and teams */}
+    		{/* ------------ Column for the players names and tournaments ----------------------*/}
 	    	<div className="col-sm-6 players">
 		    	<ul>
 			    	{/* Maps over the players array */}
 			    	{this.state.players.map((item, index) => {
 		                const shuffled = this.state.shuffled;
+		              	{/* Fragment is used as a div causes issues with how bootstrap displays list items */}
 		                return (
-		                    <div key={"d" + index}>
+		                    <Fragment key={"d" + index}>
 		                        {/* if the index number is divisible by 2 the Tournament header is created */}
 		                        { (index % 2 === 0) && (shuffled === true) ? <li key={"t" + index } className="teams"> Tournament </li> : null }
-		                       	{/* if the index number not divisible by 2 the "vs" is inserted */}
+		                       	{/* if the index number not divisible by 2 the "vs" <li> is inserted */}
 		                        { (index % 2 !== 0) && (shuffled === true) ? <li key={"v" + index } className="vs list-group-item"> vs </li> : null }
-		                        <li className="list-group-item players" key={index} value="hello"> {item} </li>
-							</div>
+		                       	{/* displays the players name in a <li>*/}
+		                        <li className="list-group-item players" key={index}> {item} </li>
+							</Fragment>
 		                );
 		            })} 
 		        </ul>

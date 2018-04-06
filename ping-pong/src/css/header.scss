@@ -1,24 +1,25 @@
-//used to set the header styling
+//used to set the Header styling / animations
 
 .branding {
-	/* Display */
-	background-color: #425d7c;
-	color: #f2f2f2;
-
 	/* Positioning */
 	padding: 3px;
 	padding-top: 11px;
-}
-.page-header {
+
 	/* Display */
-	background-color: #549f91;
-	box-shadow: 0px 5px #888888;
+	background-color: #425d7c;
+	color: #f2f2f2;
+}
+
+.page-header {
 	
 	/* Positioning */
 	vertical-align: middle;	
 	padding: 20px;
 	margin: 0px;
-	
+
+	/* Display */
+	background-color: #549f91;
+	box-shadow: 0px 5px #888888;
 
 	/* Text */
 	h1, h5 {
@@ -36,16 +37,112 @@
 
 	}
 
-	/* Img Display */
-	img {
-		padding-top: 10px;
-		width: 100px;
+}
+
+.header-title {
+	/* Positioning / Size */
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 100px;;
+	left: 0
+}
+
+.wrapper{
+	width: 100%;
+	height:200px;
+}
+
+.left-player{
+	/* Positioning / Size */
+	float:left;
+	position: absolute;
+	top: 50px;
+	left: 10px;
+
+	/* Size */
+	width:30px;
+	height:100px;
+
+	/* Display */
+	background:#498c92;
+
+	/* animation */
+	animation:left-player 3s infinite;
+
+	@keyframes left-player{
+		0% {margin-top:0px;}
+		50%{margin-top:100px}
+		100%{margin-top:0px}
+
+	}
+  
+}
+.right-player{
+  
+	/* Positioning / Size */
+	float:right;
+	width:30px;
+	height:100px;
+	position: absolute;
+	top: 50px;
+	right: 10px;
+
+	/* Display */
+	background:#498c92;
+
+	/* Animation */
+	animation:right-player 3s infinite;
+
+	@keyframes right-player{
+	0% {margin-top: 100px}
+	50%{margin-top:0px}
+	100%{margin-top:100px}
+
+    }
+  
+}
+
+.ball{
+  
+	/* Positioning */
+	float:left;
+	width:50px;
+	height:50px;
+	margin-top:30px;
+
+	/* Display */
+	background:#f2f2f2;
+	border-radius:50%;
+
+	/* Animation */
+	animation:bounce-ball 3s linear infinite;
+
+	@keyframes bounce-ball{
+	0% {margin-top:30px;margin-left:0%;}
+	25%{margin-left:50%;margin-top:172px}
+	50%{margin-left:95%;margin-top:30px;}
+	75%{margin-left:40%;margin-top:172px}
+	100%{margin-left:1%;margin-top:30px;}
 	}
 }
 
-@media only screen and (max-width: 1013px) {
-	.racket {
-		display: none;
-	}
+/* Changes the ball bounce positions based on the width of the browser */
+@media only screen and (max-width: 900px) {
+	@keyframes bounce-ball{
+  	0% {margin-top:30px;margin-left:0%;}
+	25%{margin-left:50%;margin-top:172px}
+	50%{margin-left:90%;margin-top:30px;}
+	75%{margin-left:40%;margin-top:172px}
+	100%{margin-left:1%;margin-top:30px;}
 
+	}
 }
+
+/* Hides the ping pong animation when the sceen gets too small */
+@media only screen and (max-width: 450px) {
+	.right-player, .left-player, .ball {
+	display:none;
+	}
+}
+

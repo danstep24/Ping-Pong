@@ -1,35 +1,39 @@
 .controls {
-	border: 1px solid #afafaf;
-	padding: 20px;
-	border-radius: 4px;
-	border: none;
+	/* Positioning / Size */
 	width: 70%;
+	padding: 20px;
 	margin-left: auto;
 	margin-top: 30px;
+	text-align: left;
+	
+	/* Display */
+	border-radius: 4px;
+	border: none;
 	background-color: #498c92;
 	color: #f2f2f2;
-	text-align: left;
+	
+	/* Animation */
 	animation: fade 1s linear;
 
-	button, input {
+	/* Margin for emements inside the controls div */
+	button, input, .message {
 		margin: 5px;
 	}
 
-.form-control {
-}
-
-
-@keyframes fade {
-  0%,100% { opacity: 0  }
-  100% { opacity: 1 }
-}
-	
-}
-
-@media only screen and (max-width: 600px) {
-	.controls {
-		width: 90%;
-		margin-right: auto;
+	/* Fade in for controls onload */
+	@keyframes fade {
+	  0%,100% { opacity: 0  }
+	  100% { opacity: 1 }
 	}
 
+	/* Increases the size of the controls based on browser width */
+	@media only screen and (max-width: 750px) {
+		.controls {
+			width: 90%;
+			margin-right: auto;
+		}
+	}
 }
+
+
+	

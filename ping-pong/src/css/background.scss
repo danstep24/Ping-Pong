@@ -1,17 +1,12 @@
 html body {
-   height: 100vh;
-   min-height: 100%;
-
-   background: 
-  /* top, transparent red, faked with gradient */ 
+  height: 100vh;
+  background: 
+  /* image overlay */ 
   linear-gradient(
     rgba(50, 50, 50, 0.61), 
     rgba(50, 50, 50, 0.61)
   ),
   /* bottom, image */
   url("../images/tennis.jpg");
-  text-align: right;
   background-size: cover;
-
-
 }

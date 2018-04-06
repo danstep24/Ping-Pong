@@ -9,16 +9,18 @@ const Header = () => (
     	</div>
         {/* Boot strap 3 column layout */}
         <div className="row page-header ">
-	        <div className="col-sm racket">
-	        	<img  alt="Ping pong racket left" src={require('../images/racket.png')} />
+	        {/* Ping Pong animation */}
+	        <div className="wrapper">
+		  		<div className="left-player"></div>
+		  		<div className="ball"></div>
+		  		<div className="clear"></div>
+		  		<div className="right-player"></div>
 	        </div>
-	        <div className="col-sm">
-	        	<h1>PING PONG</h1>
-	        	<h5> TOURNAMENT GENERATOR</h5>
-	        </div>
-	        <div className="col-sm racket">
-	        	<img alt="Ping pong racket right" src={require('../images/racket.png')} />
-	        </div>
+	       	{/* Site Title */}
+	        <div className="header-title">
+				<h1>PING PONG</h1>
+	        	<h5>TOURNAMENT GENERATOR</h5>
+	    	</div>
 	    </div>
     </header>
 );

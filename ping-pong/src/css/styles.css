@@ -1,53 +1,63 @@
+/* List of players*/
 ul {
   margin-top: 30px;
+  margin-bottom: 50px;
   width: 80%; }
 
+/* Player */
 li, .players {
-  list-style: none;
-  animation: fade 0.5s linear;
+  /* Positioning / Size */
   padding: 3px;
   margin-right: auto;
-  border-radius: 6px;
-  margin-bottom: 0px;
-  margin-top: 0px; }
+  margin-top: 0px;
+  border-radius: 0px;
+  /* Display */
+  list-style: none;
+  /* Animation */
+  animation: fade 0.5s linear; }
 
+/* Player */
 .teams {
+  /* Positioning / Size */
   margin-top: 5px;
+  /* Display */
+  border-radius: 6px 6px 0px 0px;
   background-color: #496892;
   color: #f2f2f2; }
 
 .vs {
   padding: 0px; }
 
+/* Fade ins for li */
 @keyframes fade {
   0%,100% {
     opacity: 0; }
   100% {
     opacity: 1; } }
-@media only screen and (max-width: 600px) {
+/* Increases width and centers when screen size is less than 700 */
+@media only screen and (max-width: 700px) {
   ul {
     width: 90%; }
 
   li, .players {
     margin-left: auto; } }
 .branding {
-  /* Display */
-  background-color: #425d7c;
-  color: #f2f2f2;
   /* Positioning */
   padding: 3px;
-  padding-top: 11px; }
+  padding-top: 11px;
+  /* Display */
+  background-color: #425d7c;
+  color: #f2f2f2; }
 
 .page-header {
-  /* Display */
-  background-color: #549f91;
-  box-shadow: 0px 5px #888888;
   /* Positioning */
   vertical-align: middle;
   padding: 20px;
   margin: 0px;
-  /* Text */
-  /* Img Display */ }
+  /* Display */
+  background-color: #549f91;
+  box-shadow: 0px 5px #888888;
+  /* Text */ }
   .page-header h1, .page-header h5 {
     color: #f2f2f2; }
   .page-header h1 {
@@ -56,56 +66,152 @@ li, .players {
   .page-header h5 {
     text-shadow: 1px 1px #888888;
     font-size: 1.1em; }
-  .page-header img {
-    padding-top: 10px;
-    width: 100px; }
 
-@media only screen and (max-width: 1013px) {
-  .racket {
+.header-title {
+  /* Positioning / Size */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100px;
+  left: 0; }
+
+.wrapper {
+  width: 100%;
+  height: 200px; }
+
+.left-player {
+  /* Positioning / Size */
+  float: left;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  /* Size */
+  width: 30px;
+  height: 100px;
+  /* Display */
+  background: #498c92;
+  /* animation */
+  animation: left-player 3s infinite; }
+@keyframes left-player {
+  0% {
+    margin-top: 0px; }
+  50% {
+    margin-top: 100px; }
+  100% {
+    margin-top: 0px; } }
+.right-player {
+  /* Positioning / Size */
+  float: right;
+  width: 30px;
+  height: 100px;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  /* Display */
+  background: #498c92;
+  /* Animation */
+  animation: right-player 3s infinite; }
+@keyframes right-player {
+  0% {
+    margin-top: 100px; }
+  50% {
+    margin-top: 0px; }
+  100% {
+    margin-top: 100px; } }
+.ball {
+  /* Positioning */
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-top: 30px;
+  /* Display */
+  background: #f2f2f2;
+  border-radius: 50%;
+  /* Animation */
+  animation: bounce-ball 3s linear infinite; }
+@keyframes bounce-ball {
+  0% {
+    margin-top: 30px;
+    margin-left: 0%; }
+  25% {
+    margin-left: 50%;
+    margin-top: 172px; }
+  50% {
+    margin-left: 95%;
+    margin-top: 30px; }
+  75% {
+    margin-left: 40%;
+    margin-top: 172px; }
+  100% {
+    margin-left: 1%;
+    margin-top: 30px; } }
+/* Changes the ball bounce positions based on the width of the browser */
+@media only screen and (max-width: 900px) {
+  @keyframes bounce-ball {
+    0% {
+      margin-top: 30px;
+      margin-left: 0%; }
+    25% {
+      margin-left: 50%;
+      margin-top: 172px; }
+    50% {
+      margin-left: 90%;
+      margin-top: 30px; }
+    75% {
+      margin-left: 40%;
+      margin-top: 172px; }
+    100% {
+      margin-left: 1%;
+      margin-top: 30px; } } }
+/* Hides the ping pong animation when the sceen gets too small */
+@media only screen and (max-width: 450px) {
+  .right-player, .left-player, .ball {
     display: none; } }
 html body {
   height: 100vh;
-  min-height: 100%;
   background: linear-gradient(rgba(50, 50, 50, 0.61), rgba(50, 50, 50, 0.61)), url("../images/tennis.jpg");
-  text-align: right;
   background-size: cover; }
 
 .controls {
-  border: 1px solid #afafaf;
-  padding: 20px;
-  border-radius: 4px;
-  border: none;
+  /* Positioning / Size */
   width: 70%;
+  padding: 20px;
   margin-left: auto;
   margin-top: 30px;
+  text-align: left;
+  /* Display */
+  border-radius: 4px;
+  border: none;
   background-color: #498c92;
   color: #f2f2f2;
-  text-align: left;
-  animation: fade 1s linear; }
-  .controls button, .controls input {
+  /* Animation */
+  animation: fade 1s linear;
+  /* Margin for emements inside the controls div */
+  /* Fade in for controls onload */
+  /* Increases the size of the controls based on browser width */ }
+  .controls button, .controls input, .controls .message {
     margin: 5px; }
 @keyframes fade {
   0%,100% {
     opacity: 0; }
   100% {
     opacity: 1; } }
-@media only screen and (max-width: 600px) {
-  .controls {
-    width: 90%;
-    margin-right: auto; } }
+  @media only screen and (max-width: 750px) {
+    .controls .controls {
+      width: 90%;
+      margin-right: auto; } }
+
 .footer {
-  background-color: #425d7c;
-  color: #f2f2f2;
+  /* Positioning */
+  width: 100%;
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
   text-align: center;
+  padding: 3px;
+  padding-top: 11px;
   /* Display */
   background-color: #425d7c;
-  color: #f2f2f2;
-  /* Positioning */
-  padding: 3px;
-  padding-top: 11px; }
+  color: #f2f2f2; }
 
 /*# sourceMappingURL=styles.css.map */
