@@ -10,7 +10,7 @@ The completed project can be found at http://daniel.developme.space/ping-pong/
 Or follow the instructions below to view the project locally on your machine.
 
 Wireframes for the PC and Mobile 
-![alt text](/wireframes/mobile.png)
+![alt text](/wireframes/phone.png)
  
 
 ## Getting Started
@@ -44,7 +44,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>```
 
 
-## Deployment
+### Deployment
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
