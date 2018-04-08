@@ -11,7 +11,7 @@ class Players extends Component {
 	      player: "",
 	      // How many players the user has added
 	      counter: 0,
-	      // If the the user has run the "suffles fuction"
+	      // If the the user has run the "shuffles function"
 	      shuffled: false,
 	      // message to be displayed to the user
 	      message: "",
@@ -71,7 +71,7 @@ class Players extends Component {
 		
 		}
 		else {
-			// error message if the counter isnt divisible by 2 
+			// error message if the counter isn't divisible by 2 
 			this.setState({
 		      message: "Error: You need to enter teams in multiples of two",
 		    });
@@ -106,7 +106,6 @@ class Players extends Component {
 			    	{/* Maps over the players array */}
 			    	{this.state.players.map((item, index) => {
 		                const shuffled = this.state.shuffled;
-		              	{/* Fragment is used as a div causes issues with how bootstrap displays list items */}
 		                return (
 		                    <Fragment key={"d" + index}>
 		                        {/* if the index number is divisible by 2 the Tournament header is created */}
