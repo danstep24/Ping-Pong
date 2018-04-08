@@ -1,6 +1,6 @@
 import React, { Component, Fragment }  from "react";
 
-// we use className to add classes for Bootstrap styling
+// use className to add classes for Bootstrap styling
 class Players extends Component {
     constructor(props) {
 	    super(props);
