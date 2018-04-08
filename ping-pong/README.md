@@ -1,4 +1,4 @@
-# Ping Pong TOURNAMENT GENERATOR
+# Ping Pong Tournament Generator 
 
 I was tasked by DevelopMe to create a tool which randomly creates pairings for a table tennis tournament from a list of names collected from the user.
 I was able to create a tournament generator that allows you to create 1v1 tournaments. 
