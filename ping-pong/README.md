@@ -9,8 +9,7 @@ The completed project can be found at http://daniel.developme.space/ping-pong/
 
 Or follow the instructions below to view the project locally on your machine.
 
-Wireframes for the PC and Mobile 
-![alt text](/wireframes/phone.png)
+Wireframes for the PC and Mobile can be found in the wireframes folder.
  
 
 ## Getting Started
