@@ -1,18 +1,18 @@
 # Ping Pong Tournament Generator 
 
-I was tasked by DevelopMe to create a tool which randomly creates pairings for a table tennis tournament from a list of names collected from the user.
+I was tasked by DevelopMe to create a tool to randomly generate pairings for a table tennis tournament from a list of names submitted by the user.
 I was able to create a tournament generator that allows you to create 1v1 tournaments. 
 I have taken great effort to make the tool simple and logical.
 
 
 ## Design
 
-Wireframes for the PC and Mobile can be found in the wireframes folder.
+Wireframes for PC and Mobile can be found in the wireframes folder.
 
 I have used a full width header with an animation of the "Pong" game, this was built using CSS key frames.
-I felt this adds character and makes the site more aesthetically pleasing.
+I feel this adds character and makes the site more aesthetically pleasing.
 
-For the design I decided to to use a two column layout (BootStrap), the controls on the left and the players listed on the right. When viewing this on a PC, the user (in most cases) can complete all tasks without ever scolling.
+For the design, I decided to to use a two column layout (BootStrap), with the controls on the left and the players listed on the right. When viewing this on a PC, the user (in most cases) can complete all tasks without ever scolling.
 When on a mobile this neatly changes to the a 1 column layout. 
 
 The completed project can be found at http://daniel.developme.space/ping-pong/
