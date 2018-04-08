@@ -5,89 +5,60 @@ I was tasked by DevelopMe to create a tool which randomly creates pairings for a
 I was able to create a tournament generator that allows you to create 1v1 tournaments. 
 I have taken great effort to make the tool simple and logical. 
 
+The completed project can be found at http://daniel.developme.space/ping-pong/
+
+Or follow the instructions below to view the project locally on your machine
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for purposes. 
+These instructions will get you a copy of the project up and running on your local machine for testing purposes. 
+NOTE: No prerequisites are required for running the production build version of the app in the 'Build" folder. Simply open the index.html file in your browser. 
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
 ```
+You will need either "npm" or "yarn" to run the app in development mode. 
 
+npm
+https://www.npmjs.com/get-npm 
+
+yarn
+https://yarnpkg.com/lang/en/docs/install/
 
 ```
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
 ```
-Give the example
-```
+### `npm start`or `yarn start`
 
-And repeat
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```
-until finished
-```
+The page will reload if you make edits.<br>```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+
+```
+npm run build
+```
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Sass](https://sass-lang.com/) 
+* [React](https://reactjs.org/) - JS library
+* [Sublime Text](https://www.sublimetext.com/) - Text editor
+* [Git](https://git-scm.com//) - Version control system 
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
 
